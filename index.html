@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>数字木鱼</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="woodfish-wrapper">
+            <!-- 使用SVG创建木鱼图案 -->
+            <svg class="woodfish" viewBox="0 0 200 120" xmlns="http://www.w3.org/2000/svg">
+                <path class="woodfish-body" d="M20,60 Q100,20 180,60 Q100,100 20,60" fill="#8B4513"/>
+                <path class="woodfish-detail" d="M40,60 Q100,30 160,60" fill="none" stroke="#5C3317" stroke-width="2"/>
+                <circle class="woodfish-center" cx="100" cy="60" r="5" fill="#5C3317"/>
+            </svg>
+            <div class="ripple"></div>
+        </div>
+        <div class="counter">功德 +<span id="merit">0</span></div>
+        <div class="instruction">点击木鱼积累功德</div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html> 
