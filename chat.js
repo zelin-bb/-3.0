@@ -4,8 +4,9 @@ document.addEventListener('DOMContentLoaded', () => {
     const sendButton = document.getElementById('sendButton');
 
     // API配置
-    const API_KEY = 'sk-buvxqwnqaimhgdgoxleqybsoyahkbvgjdfvxwcucpyvsgsqu'; // SiliconFlow API密钥
     const API_URL = 'http://localhost:3000/api/chat';  // 使用完整的服务器地址
+    // 不再直接在前端存储API密钥
+    // const API_KEY = 'sk-buvxqwnqaimhgdgoxleqybsoyahkbvgjdfvxwcucpyvsgsqu';
 
     // 添加消息到聊天界面
     function addMessage(content, isUser = false) {
@@ -69,8 +70,8 @@ document.addEventListener('DOMContentLoaded', () => {
                 temperature: 0.7,
                 top_p: 0.7,
                 max_tokens: 512,
-                stream: false,
-                api_key: API_KEY
+                stream: false
+                // API密钥现在由服务器端处理
             };
 
             console.log('发送请求体:', JSON.stringify(requestBody, null, 2));

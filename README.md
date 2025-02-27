@@ -30,12 +30,21 @@
 npm install
 ```
 
-3. **启动服务器**
+3. **配置环境变量**
+```bash
+# 创建.env文件
+touch .env
+
+# 在.env文件中添加你的API密钥
+echo "API_KEY=你的SiliconFlow API密钥" > .env
+```
+
+4. **启动服务器**
 ```bash
 npm start
 ```
 
-4. **访问应用**
+5. **访问应用**
 在浏览器中打开: http://localhost:3000
 
 ### API配置（可选）
@@ -43,9 +52,9 @@ npm start
 本应用可以连接到SiliconFlow AI以提供更高质量的禅师回答。
 
 1. 在[SiliconFlow官网](https://docs.siliconflow.cn/)注册并获取API密钥
-2. 打开`chat.js`文件，将API_KEY变量更新为你的密钥:
-```javascript
-const API_KEY = '你的SiliconFlow API密钥';
+2. 将API密钥添加到项目根目录下的`.env`文件中:
+```
+API_KEY=你的SiliconFlow API密钥
 ```
 
 ## 技术架构

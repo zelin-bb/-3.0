@@ -2,6 +2,10 @@ const express = require('express');
 const cors = require('cors');
 const fetch = require('node-fetch');
 const path = require('path');
+const dotenv = require('dotenv');
+
+// 加载环境变量
+dotenv.config();
 
 const app = express();
 const PORT = process.env.PORT || 3000;
@@ -73,7 +77,7 @@ app.post('/api/chat', async (req, res) => {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
-                    'Authorization': `Bearer ${api_key}` // 使用Bearer认证
+                    'Authorization': `Bearer ${process.env.API_KEY}` // 使用环境变量中的API密钥
                 },
                 body: JSON.stringify(apiRequestBody),
                 timeout: 10000
