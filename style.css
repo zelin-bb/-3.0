@@ -1,3 +1,9 @@
+@keyframes fadeOut {
+    to {
+        opacity: 0;
+    }
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -6,11 +12,45 @@
 
 body {
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-    background-color: #f5f5f7;
+    background-image: url('images/background.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
     min-height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+/* 禅房按钮样式 */
+.zen-room-button {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 16px;
+    background: rgba(255, 255, 255, 0.8);
+    color: #8B4513;
+    text-decoration: none;
+    border-radius: 20px;
+    font-weight: 500;
+    font-size: 0.95rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(4px);
+    transition: all 0.3s ease;
+}
+
+.zen-room-button:hover {
+    background: rgba(255, 255, 255, 0.95);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.zen-room-button svg {
+    color: #8B4513;
 }
 
 .container {
@@ -21,7 +61,7 @@ body {
 .woodfish-wrapper {
     position: relative;
     width: 200px;
-    height: 120px;
+    height: 200px;
     margin: 0 auto;
     cursor: pointer;
     transition: transform 0.1s ease;
@@ -34,7 +74,35 @@ body {
 .woodfish {
     width: 100%;
     height: 100%;
+    object-fit: contain;
     filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.2));
+}
+
+/* 浮动数字样式 */
+.floating-number {
+    position: absolute;
+    color: #8B4513;
+    font-weight: bold;
+    font-size: 0.9rem;
+    pointer-events: none;
+    opacity: 0;
+    animation: floatUp 1s ease-out forwards;
+    white-space: nowrap;
+}
+
+@keyframes floatUp {
+    0% {
+        transform: translateY(0) scale(0.8);
+        opacity: 1;
+    }
+    50% {
+        transform: translateY(-25px) scale(1.1);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(-50px) scale(1);
+        opacity: 0;
+    }
 }
 
 .ripple {
@@ -62,10 +130,12 @@ body {
     font-size: 1.5rem;
     color: #1d1d1f;
     font-weight: 600;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .instruction {
     margin-top: 1rem;
-    color: #86868b;
+    color: #1d1d1f;
     font-size: 0.9rem;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 } 

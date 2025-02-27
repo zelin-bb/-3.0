@@ -7,18 +7,22 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <a href="chat.html" class="zen-room-button">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 13.5997 2.37562 15.1116 3.04346 16.4525C3.22094 16.8088 3.28001 17.2161 3.17712 17.6006L2.58151 19.8267C2.32295 20.793 3.20701 21.677 4.17335 21.4185L6.39939 20.8229C6.78393 20.72 7.19121 20.7791 7.54753 20.9565C8.88837 21.6244 10.4003 22 12 22Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+            <path d="M8 12H8.01" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M12 12H12.01" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M16 12H16.01" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        禅房
+    </a>
+    
     <div class="container">
         <div class="woodfish-wrapper">
-            <!-- 使用SVG创建木鱼图案 -->
-            <svg class="woodfish" viewBox="0 0 200 120" xmlns="http://www.w3.org/2000/svg">
-                <path class="woodfish-body" d="M20,60 Q100,20 180,60 Q100,100 20,60" fill="#8B4513"/>
-                <path class="woodfish-detail" d="M40,60 Q100,30 160,60" fill="none" stroke="#5C3317" stroke-width="2"/>
-                <circle class="woodfish-center" cx="100" cy="60" r="5" fill="#5C3317"/>
-            </svg>
+            <img src="images/woodfish.png" alt="木鱼" class="woodfish">
             <div class="ripple"></div>
         </div>
         <div class="counter">功德 +<span id="merit">0</span></div>
-        <div class="instruction">点击木鱼积累功德</div>
     </div>
     <script src="script.js"></script>
 </body>
