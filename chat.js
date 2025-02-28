@@ -5,8 +5,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // API配置
     const API_URL = 'http://localhost:3000/api/chat';  // 使用完整的服务器地址
-    // 不再直接在前端存储API密钥
-    // const API_KEY = 'sk-buvxqwnqaimhgdgoxleqybsoyahkbvgjdfvxwcucpyvsgsqu';
+  
 
     // 添加消息到聊天界面
     function addMessage(content, isUser = false) {
